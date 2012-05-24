@@ -2,7 +2,7 @@
 
 The goal of this project is to improve style within a project by setting flags that enforce consistency, but not necessarily a specific set of rules.
 
-This project is intended to be NuGet package that all projects can install and have a reasonable set of style guidelines and R# definitions for auto code formatting.
+This project is intended to be a NuGet package that all projects can install and have a reasonable set of style guidelines and R# definitions for auto code formatting.
 
 There's no right way to write code. Everyone has their own flavor and likes/dislikes when writing code, and this is not intended to be a bible or a strict enforcement of "this is the way that you have to code". We want you to take this library and use it as a starting point, customize the rules to your liking, and allow the StyleCop and R# tools to improve your coding experience.
 
