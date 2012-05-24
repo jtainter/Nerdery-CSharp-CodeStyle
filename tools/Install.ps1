@@ -15,13 +15,35 @@ $projectXml = [xml](Get-Content $project.FullName)
 $namespace = 'http://schemas.microsoft.com/developer/msbuild/2003'
 
 # remove current import nodes
-$nodes = @(Select-Xml "//msb:Project/msb:Import[contains(@Project,'\packages\StyleCop.MSBuild.')]" $projectXml -Namespace @{msb = $namespace} | Foreach {$_.Node})
+$nodes = @(Select-Xml "//msb:Project/msb:Import[contains(@Project,'\packages\Nerdery.CSharpCodeStyle.')]" $projectXml -Namespace @{msb = $namespace} | Foreach {$_.Node})
 if ($nodes)
 {
     foreach ($node in $nodes)
     {
         $node.ParentNode.RemoveChild($node)
     }
+}
+
+# add debug properties
+$debugNodes = @(Select-Xml "//msb:Project/msb:PropertyGroup[contains(@Condition,'Debug|AnyCPU')]/msb:StyleCopTreatErrorsAsWarnings" $projectXml -Namespace @{msb = $namespace} | Foreach {$_.Node})
+if(-not $debugNodes)
+{
+	$treatErrorsAsWarnings = $projectXml.CreateElement('StyleCopTreatErrorsAsWarnings', $namespace)
+	$treatErrorsAsWarnings.InnerText = 'true'
+	@(Select-Xml "//msb:Project/msb:PropertyGroup[contains(@Condition,'Debug|AnyCPU')]" $projectXml -Namespace @{msb = $namespace} | Foreach {
+		$_.Node.AppendChild($treatErrorsAsWarnings)
+	})
+}
+
+# add release properties
+$releaseNodes = @(Select-Xml "//msb:Project/msb:PropertyGroup[contains(@Condition,'Release|AnyCPU')]/msb:StyleCopTreatErrorsAsWarnings" $projectXml -Namespace @{msb = $namespace} | Foreach {$_.Node})
+if(-not $releaseNodes)
+{
+	$treatErrorsAsWarnings = $projectXml.CreateElement('StyleCopTreatErrorsAsWarnings', $namespace)
+	$treatErrorsAsWarnings.InnerText = 'false'
+	@(Select-Xml "//msb:Project/msb:PropertyGroup[contains(@Condition,'Release|AnyCPU')]" $projectXml -Namespace @{msb = $namespace} | Foreach {
+		$_.Node.AppendChild($treatErrorsAsWarnings)
+	})
 }
 
 # work out relative path to targets
