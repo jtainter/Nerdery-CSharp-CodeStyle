@@ -1,1 +1,0 @@
-start %cd%\packages\Nerdery.CSharpCodeStyle.4.7.17.0\tools\StyleCopSettingsEditor.exe Settings.StyleCop
