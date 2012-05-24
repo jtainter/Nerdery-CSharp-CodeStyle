@@ -61,5 +61,9 @@ $projectXml.Project.AppendChild($import)
 # save changes
 $projectXml.Save($project.FullName)
 
-#copy settings file
-copy-item (join-path $toolsPath "Settings-Default.StyleCop") (join-path $project.FullName.Substring(0, $project.FullName.Substring(0, $project.FullName.LastIndexOf("\")).LastIndexOf("\")) "Settings.StyleCop")
+#copy custom settings file if it doesn't exist yet
+$customSettingsFileLocation = (join-path $project.FullName.Substring(0, $project.FullName.Substring(0, $project.FullName.LastIndexOf("\")).LastIndexOf("\")) "Settings.StyleCop")
+if(-not (Test-Path $customSettingsFileLocation)) 
+{
+	copy-item (join-path $toolsPath "Settings-Default.StyleCop") $customSettingsFileLocation
+}

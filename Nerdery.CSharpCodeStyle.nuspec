@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <version>4.7.17.0-alpha10</version>
+    <authors>Ken Sykora,Andy Reeves,Adam Ralph</authors>
+    <owners>Ken Sykora</owners>
+    <projectUrl>https://github.com/kensykora/Nerdery-CSharp-CodeStyle</projectUrl>
+    <iconUrl>http://nerdery.com/assets/layout/apple-touch-icon.png</iconUrl>
+    <id>Nerdery.CSharpCodeStyle</id>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Nerdery C# Code Style Conventions with StyleCop (StyleCop+) Integration with MS Build</description>
+    <summary>Adds official StyleCop MSBuild targets to your project. Runs StyleCop analysis on your project with every build. Works both on a developer workstation (with or without Visual Studio) and on a build s</summary>
+    <releaseNotes>See the project site.</releaseNotes>
+    <copyright>Copyright (c) 2012 The Nerdery, Adam Ralph (adam@adamralph.com)</copyright>
+    <language>en-US</language>
+  </metadata>
+  <files>
+    <file src="content\StyleCop.MSBuild.ContentHook.txt" target="content\StyleCop.MSBuild.ContentHook.txt" />
+    <file src="tools\de-DE\StyleCop.CSharp.Rules.resources.dll" target="tools\de-DE\StyleCop.CSharp.Rules.resources.dll" />
+    <file src="tools\en-GB\StyleCop.CSharp.Rules.resources.dll" target="tools\en-GB\StyleCop.CSharp.Rules.resources.dll" />
+    <file src="tools\fr-FR\StyleCop.CSharp.Rules.resources.dll" target="tools\fr-FR\StyleCop.CSharp.Rules.resources.dll" />
+    <file src="tools\pl-PL\StyleCop.CSharp.Rules.resources.dll" target="tools\pl-PL\StyleCop.CSharp.Rules.resources.dll" />
+    <file src="tools\pt-BR\StyleCop.CSharp.Rules.resources.dll" target="tools\pt-BR\StyleCop.CSharp.Rules.resources.dll" />
+    <file src="tools\ru-RU\StyleCop.CSharp.Rules.resources.dll" target="tools\ru-RU\StyleCop.CSharp.Rules.resources.dll" />
+    <file src="tools\Install.ps1" target="tools\Install.ps1" />
+    <file src="tools\Settings-Default.StyleCop" target="tools\Settings-Default.StyleCop" />
+    <file src="tools\Settings.StyleCop" target="tools\Settings.StyleCop" />
+    <file src="tools\StyleCop.CSharp.dll" target="tools\StyleCop.CSharp.dll" />
+    <file src="tools\StyleCop.CSharp.Rules.dll" target="tools\StyleCop.CSharp.Rules.dll" />
+    <file src="tools\StyleCop.dll" target="tools\StyleCop.dll" />
+    <file src="tools\StyleCop.Targets" target="tools\StyleCop.Targets" />
+    <file src="tools\StyleCop.VSPackage.dll" target="tools\StyleCop.VSPackage.dll" />
+    <file src="tools\StyleCopPlus.dll" target="tools\StyleCopPlus.dll" />
+    <file src="tools\StyleCopSettingsEditor.exe" target="tools\StyleCopSettingsEditor.exe" />
+    <file src="tools\Uninstall.ps1" target="tools\Uninstall.ps1" />
+    <file src="license.txt" target="license.txt" />
+    <file src="README.md" target="README.md" />
+  </files>
+</package>
