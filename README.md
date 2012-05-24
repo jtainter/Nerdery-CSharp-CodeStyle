@@ -9,8 +9,11 @@ There's no right way to write code. Everyone has their own flavor and likes/disl
 ##Quick Start
 
  1. If you've already installed StyleCop, **uninstall it**. This is a standalone library and the StyleCop installer does some very annoying stuff with the GAC and MSBuild targets. Unfortunately, the way that StyleCop finds external rule libraries will almost guarantee that all of our style rules won't get run (some of them will though). We are looking into a way to remove this step.
- 1. In the NuGet Package manager, install the package Nerdery.CSharpCodingStyle
- 1. Build your project, and fix your style rules!
+ 1. Install the package from NuGet
+```
+Install-Package Nerdery.CSharpCodeStyle -Version 4.7.17.0-alpha9a -Pre
+```
+ 1. Build your project, and start making your style consistent!
  
 More information on how to customize, contribute, and find out about our style decisions can be found on our wiki 
 
