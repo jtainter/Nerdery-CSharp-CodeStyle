@@ -11,7 +11,7 @@ There's no right way to write code. Everyone has their own flavor and likes/disl
  1. If you've already installed StyleCop, **uninstall it**. This is a standalone library and the StyleCop installer does some very annoying stuff with the GAC and MSBuild targets. Unfortunately, the way that StyleCop finds external rule libraries will almost guarantee that all of our style rules won't get run (some of them will though). We are looking into a way to remove this step.
  1. Install the package from NuGet
 ```
-Install-Package Nerdery.CSharpCodeStyle -Version 4.7.17.0-alpha9a -Pre
+Install-Package Nerdery.CSharpCodeStyle -Version 1.0.0-alpha -Pre
 ```
  1. Build your project, and start making your style consistent!
  

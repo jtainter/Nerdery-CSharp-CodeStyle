@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
-    <version>4.7.17.0-alpha10</version>
+    <version>1.0.0-alpha</version>
     <authors>Ken Sykora,Andy Reeves,Adam Ralph</authors>
     <owners>Ken Sykora</owners>
     <projectUrl>https://github.com/kensykora/Nerdery-CSharp-CodeStyle</projectUrl>
