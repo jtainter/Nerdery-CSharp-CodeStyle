@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SourceAnalyzer Name="Nerdery">
+  <Description>
+    These custom rules provide extensions to the ones provided with StyleCop.
+  </Description>
+
+  <Rules>
+    <RuleGroup Name="Extensions">
+      <Rule Name="PublicConstructorsShouldBeDocumented" CheckId="ND1001">
+        <Context>Public constructors should have documentation.</Context>
+        <Description>Nerdery standards require comments on public methods.</Description>
+      </Rule>
+      <Rule Name="PublicMethodsShouldBeDocumented" CheckId="ND1002">
+        <Context>Public methods should have documentation.</Context>
+        <Description>Nerdery standards require comments on public methods.</Description>
+      </Rule>
+      <Rule Name="RegionMustBeSeparatedByBlankLine" CheckId="ND1003">
+        <Context>Regions have to be spaced properly</Context>
+        <Description>Nerdery standards require a space before/after the beginning or end of a region definition. An
+        exception to this rule is if the begin region is beneath the start of a { or the end region is prior to a }</Description>
+      </Rule>
+      <Rule Name="RegionNameMustHaveFirstLetterCapitalized" CheckId="ND1004">
+        <Context>Regions must have the first character capitalized</Context>
+        <Description>
+          Nerdery standards require a region to have a name and that name has to have its first character capitalized.
+        </Description>
+      </Rule>
+    </RuleGroup>
+  </Rules>
+</SourceAnalyzer>
